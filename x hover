@@ -1,0 +1,37 @@
+/* Mostrar la X solo en hover */
+.woocommerce-mini-cart li.mini_cart_item .remove {
+    opacity: 0 !important;
+    transition: opacity 0.2s ease !important;
+    position: absolute !important;
+    top: 10px !important;
+    right: 0 !important;
+    color: #dc2626 !important;
+    text-decoration: none !important;
+    font-size: 20px !important;
+    line-height: 0.8 !important;
+    width: 20px !important;
+    height: 20px !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(220, 38, 38, 0.1) !important;
+    border-radius: 50% !important;
+    border: 1px solid rgba(220, 38, 38, 0.2) !important;
+    padding: 0 !important;
+    font-weight: 300 !important;
+}
+
+.woocommerce-mini-cart li.mini_cart_item:hover .remove {
+    opacity: 1 !important;
+}
+
+/* Asegurar que el nombre tenga espacio */
+.woocommerce-mini-cart li.mini_cart_item > a:nth-child(2) {
+    padding-right: 25px !important;
+    transition: padding-right 0.2s ease !important;
+}
+
+.woocommerce-mini-cart li.mini_cart_item:hover > a:nth-child(2) {
+    padding-right: 25px !important;
+}

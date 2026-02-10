@@ -1,0 +1,130 @@
+/* RESET PARA EL ITEM DEL CARRITO */
+.woocommerce-mini-cart li.mini_cart_item {
+    display: flex !important;
+    align-items: flex-start !important;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    clear: both !important;
+    overflow: hidden !important;
+    min-height: 70px !important; /* Altura mínima */
+    position: relative !important;
+}
+
+/* LIMPIAR FLOTANTES */
+.woocommerce-mini-cart li.mini_cart_item::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* IMAGEN - FIJA A LA IZQUIERDA */
+.woocommerce-mini-cart li.mini_cart_item > a:first-child {
+    float: left !important;
+    margin-right: 15px !important;
+    margin-left: 0 !important;
+    display: block !important;
+    width: 60px !important;
+    height: 60px !important;
+    position: relative !important;
+}
+
+.woocommerce-mini-cart li.mini_cart_item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    float: none !important;
+}
+
+/* CONTENEDOR DE TEXTO - QUE OCUPE EL ESPACIO RESTANTE */
+.woocommerce-mini-cart li.mini_cart_item > a:nth-child(2) {
+    display: block !important;
+    overflow: hidden !important;
+    padding-right: 25px !important; /* Espacio para el botón eliminar */
+    text-decoration: none !important;
+    color: #333 !important;
+    font-weight: 500 !important;
+    margin-bottom: 5px !important;
+    line-height: 1.4 !important;
+}
+
+/* INFORMACIÓN ADICIONAL (CANTIDAD Y PRECIO) */
+.woocommerce-mini-cart li.mini_cart_item .quantity {
+    display: block !important;
+    font-size: 13px !important;
+    color: #666 !important;
+    margin-top: 3px !important;
+    clear: both !important;
+}
+
+.woocommerce-mini-cart li.mini_cart_item .quantity .amount {
+    font-weight: 600 !important;
+    color: #333 !important;
+}
+
+/* BOTÓN ELIMINAR - POSICIÓN ABSOLUTA */
+.woocommerce-mini-cart li.mini_cart_item .remove {
+    position: absolute !important;
+    top: 10px !important;
+    right: 0 !important;
+    color: #999 !important;
+    text-decoration: none !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    width: 20px !important;
+    height: 20px !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+/* PARA FORZAR LA ESTRUCTURA CORRECTA */
+.woocommerce-mini-cart li.mini_cart_item * {
+    box-sizing: border-box !important;
+}
+
+/* LIMPIAR CUALQUIER ESTILO QUE ESTÉ CAUSANDO PROBLEMAS */
+.woocommerce-mini-cart li.mini_cart_item > * {
+    vertical-align: top !important;
+}
+
+/* SI EL PROBLEMA ES QUE EL TEXTO SE ROMPE EN VARIAS LÍNEAS */
+.woocommerce-mini-cart li.mini_cart_item > a:nth-child(2) {
+    word-wrap: break-word !important;
+    hyphens: auto !important;
+}
+
+
+/* BOTÓN ELIMINAR DISCRETO PERO VISIBLE */
+.woocommerce-mini-cart li.mini_cart_item .remove {
+    position: absolute !important;
+    top: 10px !important;
+    right: 0 !important;
+    color: #dc2626 !important;
+    text-decoration: none !important;
+    font-size: 20px !important;
+    line-height: 0.8 !important;
+    width: 20px !important;
+    height: 20px !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(220, 38, 38, 0.1) !important;
+    border-radius: 50% !important;
+    border: 1px solid rgba(220, 38, 38, 0.2) !important;
+    padding: 0 !important;
+    transition: all 0.2s ease !important;
+    font-weight: 300 !important;
+}
+
+.woocommerce-mini-cart li.mini_cart_item .remove:hover {
+    background: #dc2626 !important;
+    color: #fff !important;
+    border-color: #dc2626 !important;
+    transform: scale(1.1) !important;
+}
